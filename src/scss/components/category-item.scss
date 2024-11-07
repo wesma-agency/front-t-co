@@ -1,0 +1,99 @@
+.category-item {
+    position: relative;
+    padding: 8px 20px;
+    background-color: $color-second;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+
+    &--lines {
+        &:before {
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+            z-index: 1;
+            @include pseudo-icon("/img/categories-items/lines.svg", 380px, 90px);
+            background-position: left;
+        }
+    }
+
+    &--logo {
+        &:after {
+            position: absolute;
+            right: -3px;
+            bottom: -20px;
+            @include pseudo-icon("/img/categories-items/logo-bg.svg", 127px, 127px);
+        }
+    }
+
+    &--big {
+        padding: 0 15px 0 20px;
+        min-height: 158px;
+    }
+
+    &--logo#{&}--big {
+        &:after {
+            right: 0;
+            bottom: -8px;
+            width: 160px;
+            height: 160px;
+        }
+    }
+
+    &__main {
+        position: relative;
+        z-index: 1;
+        padding-top: 12px;
+        flex: 1 1 auto;
+        max-width: 140px;
+    }
+
+    &--big &__main {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__img-box {
+        position: relative;
+        margin-left: 10px;
+        z-index: 1;
+        align-self: center;
+        flex: 0 0 auto;
+    }
+
+    &__img {
+        max-height: 106px;
+        object-fit: contain;
+        display: block;
+    }
+
+    &--big &__img {
+        max-height: 158px;
+    }
+
+    @media (max-width: 767px) {
+        &--big {
+            flex-direction: column;
+            min-height: 240px;
+        }
+        &--logo#{&}--big {
+            &:after {
+                right: -2px;
+                bottom: -9px;
+                width: 137px;
+                height: 137px;
+            }
+        }
+
+        &--big &__img-box {
+            margin-left: 0;
+            align-self: flex-end;
+        }
+
+        &--big &__img {
+            max-height: 137px;
+        }
+    }
+}

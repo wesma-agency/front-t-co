@@ -1,0 +1,25 @@
+.menu {
+    &__list {
+        margin-top: -5px;
+        margin-left: -30px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+
+    @media (max-width: 1280px) {
+        &__list {
+            margin-left: -15px;
+        }
+
+        &__item {
+            margin-left: 15px;
+        }
+    }
+}

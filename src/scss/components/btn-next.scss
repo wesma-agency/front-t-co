@@ -1,0 +1,38 @@
+.btn-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+    &:before {
+        @include pseudo-icon("/icons/right-black.svg", 9px, 12px);
+    }
+
+    &--reverse {
+        &:before {
+            margin-right: 3px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &--middle {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+        right: -20px;
+    }
+
+    &--middle#{&}--reverse {
+        left: -20px;
+    }
+
+    @media (max-width: 767px) {
+        width: 36px;
+        height: 36px;
+    }
+}

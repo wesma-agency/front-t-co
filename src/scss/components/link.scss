@@ -1,0 +1,213 @@
+.link {
+    font-size: 16px;
+    line-height: 1.4;
+    transition: color 0.35s;
+
+    &__icon {
+        flex: 0 0 auto;
+
+        &:first-child:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &:last-child:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        &--mx-lg {
+            &:first-child:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            &:last-child:not(:first-child) {
+                margin-left: 12px;
+            }
+        }
+
+        &--mx-sm {
+            &:first-child:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            &:last-child:not(:first-child) {
+                margin-left: 8px;
+            }
+        }
+
+        &--mx-xs {
+            &:first-child:not(:last-child) {
+                margin-right: 6px;
+            }
+
+            &:last-child:not(:first-child) {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    &__text {
+        &--dashed {
+            border-bottom: 1px dashed $color-black;
+        }
+    }
+
+    &:hover &__text {
+        &--dashed {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &--primary {
+        color: $color-primary;
+    }
+
+    &--second {
+        color: $color-second;
+    }
+
+    &--white {
+        color: #fff;
+    }
+
+    &--gray-200 {
+        color: $color-gray-200;
+    }
+
+    &--gray-300 {
+        color: $color-gray-300;
+    }
+
+    &--gray-400 {
+        color: $color-gray-400;
+    }
+
+    &--hover-primary {
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &--hover-second {
+        &:hover {
+            color: $color-second;
+        }
+    }
+
+    &--lh-16 {
+        line-height: 1.6;
+    }
+
+    &--xs {
+        font-size: 12px;
+    }
+
+    &--sm {
+        font-size: 14px;
+    }
+
+    &--lg {
+        font-size: 18px;
+    }
+
+    &--xl {
+        font-size: 20px;
+    }
+
+    &--medium {
+        font-weight: 500;
+    }
+
+    &--semibold {
+        font-weight: 600;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--line {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 2px;
+            background-color: $color-black;
+        }
+    }
+
+    &--line-primary {
+        &:before {
+            background-color: $color-primary;
+        }
+    }
+
+    &--underline {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--dashed {
+        border-bottom: 1px dashed $color-black;
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &--dashed-primary {
+        border-color: $color-primary;
+    }
+
+    &--dashed-second {
+        border-color: $color-second;
+    }
+
+    &--hover-underline {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--upper {
+        text-transform: uppercase;
+    }
+
+    &--iblock {
+        display: inline-block;
+    }
+
+    &--iflex {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--justify-start {
+        justify-content: flex-start;
+    }
+
+    &--justify-end {
+        justify-content: flex-end;
+    }
+
+    &--items-start {
+        align-items: flex-start;
+    }
+
+    &--items--end {
+        align-items: flex-end;
+    }
+}

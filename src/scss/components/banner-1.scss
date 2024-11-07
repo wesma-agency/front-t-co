@@ -1,0 +1,120 @@
+.banner-1 {
+    &__content {
+        position: relative;
+        padding: 30px 54px 20px 87px;
+        height: 100%;
+        background: #fff;
+        border: 1px solid $color-gray-300;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__main {
+        flex: 1 1 auto;
+    }
+
+    &__title {
+        font-size: 32px;
+    }
+
+    &__images {
+        margin-top: 28px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__images-item {
+        min-width: 0;
+
+        &:nth-child(2) {
+            margin-top: 44px;
+            margin-left: -8px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 10px;
+            margin-left: -8px;
+        }
+    }
+
+    &__img-box {
+        margin-left: 20px;
+        max-width: 571px;
+        flex: 0 0 45%;
+    }
+
+    @media (max-width: 1280px) {
+        &__content {
+            padding: 25px 35px 20px 50px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__img-box {
+            flex-basis: 43%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__content {
+            padding: 20px 25px 20px 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__img-box {
+            flex-basis: 55%;
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__content {
+            padding: 12px 18px 30px;
+        }
+
+        &__main {
+            position: relative;
+            z-index: 1;
+        }
+
+        &__images {
+            margin-top: 10px;
+        }
+
+        &__images-item {
+            display: none;
+
+            &:nth-child(1) {
+                margin-left: -3px;
+                max-width: 66px;
+                display: block;
+            }
+
+            &:nth-child(3) {
+                margin-top: 42px;
+                max-width: 75px;
+                display: block;
+            }
+        }
+
+        &__title {
+            max-width: 210px;
+            font-size: 18px;
+        }
+
+        &__img-box {
+            position: absolute;
+            max-width: 350px;
+            top: 20px;
+            right: -110px;
+        }
+    }
+}

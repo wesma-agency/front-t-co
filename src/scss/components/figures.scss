@@ -1,0 +1,14 @@
+.figures {
+    &__list {
+        margin-top: -10px;
+        margin-left: -20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-top: 10px;
+        margin-left: 20px;
+        flex: 0 0 auto;
+    }
+}

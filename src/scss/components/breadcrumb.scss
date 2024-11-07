@@ -1,0 +1,44 @@
+.breadcrumb {
+    font-size: 14px;
+    line-height: 1.4;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            position: relative;
+            margin-right: 12px;
+
+            &:after {
+                content: "/";
+                margin-top: 1px;
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &__link,
+    &__current {
+        flex: 0 0 auto;
+    }
+
+    &__link {
+        color: $color-gray-400;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__current {
+        color: rgba($color-gray-400, 0.5);
+    }
+}

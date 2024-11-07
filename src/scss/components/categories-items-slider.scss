@@ -1,0 +1,12 @@
+.categories-items-slider {
+    &__slide {
+        height: auto;
+    }
+
+    @media (max-width: 767px) {
+        &__main {
+            margin: 0 calc($container-mobile-offset * -1);
+            padding: 0 $container-mobile-offset;
+        }
+    }
+}

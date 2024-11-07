@@ -1,0 +1,117 @@
+.main-menu {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 38px;
+    flex-direction: column;
+    width: 100%;
+    min-height: 650px;
+    display: none;
+    background: #fff;
+    box-shadow: 0px 20px 40px rgba(0, 45, 58, 0.15);
+    transition: visibility 0.6s ease-in-out, transform 0.6s ease-in-out;
+
+    &--active {
+        display: flex;
+    }
+
+    &__container {
+        width: 100%;
+    }
+
+    &__content {
+        height: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__catalog-btn {
+        margin-bottom: 25px;
+        display: none;
+
+        &:after {
+            @include pseudo-icon("/icons/right-white.svg", 24px, 24px);
+            margin-left: auto;
+            background-size: 9px 12px;
+        }
+    }
+
+    &__mobile {
+        flex: 1 1 auto;
+        display: none;
+    }
+
+    &__submenu {
+        &:not(:first-child) {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid $color-gray-300;
+        }
+    }
+
+    &__submenu-item {
+        &:not(:first-child) {
+            margin-top: 25px;
+        }
+
+        &--mt-sm {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        flex-direction: column;
+        padding: 20px;
+        height: calc(100vh - 136px);
+        height: calc(100dvh - 136px);
+        min-height: 0;
+        overflow-y: auto;
+
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+            flex: 1 1 auto;
+        }
+
+        &__body {
+            position: relative;
+            flex: 1 1 auto;
+        }
+
+        &__catalog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            display: none;
+
+            &--active {
+                display: flex;
+            }
+        }
+
+        &__catalog-btn {
+            display: flex;
+
+            &--active {
+                .btn__icon {
+                    display: none;
+                }
+
+                &:after {
+                    order: -1;
+                    margin-left: 0px;
+                    margin-right: 10px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+}
