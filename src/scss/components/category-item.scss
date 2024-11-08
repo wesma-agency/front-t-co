@@ -74,11 +74,12 @@
     }
 
     @media (max-width: 767px) {
-        &--big {
+        &--mobile-big {
             flex-direction: column;
             min-height: 240px;
         }
-        &--logo#{&}--big {
+
+        &--logo#{&}--mobile-big {
             &:after {
                 right: -2px;
                 bottom: -9px;
@@ -87,12 +88,12 @@
             }
         }
 
-        &--big &__img-box {
+        &--mobile-big &__img-box {
             margin-left: 0;
             align-self: flex-end;
         }
 
-        &--big &__img {
+        &--mobile-big &__img {
             max-height: 137px;
         }
     }

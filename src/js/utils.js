@@ -37,9 +37,22 @@ export function createElem(type, className, options) {
     return $elem;
 }
 
+export function extractNumber(str) {
+    str = str.replace(/\s+/g, "");
+    str = str.replace(",", ".");
+    const match = str.match(/^(\d+(\.\d+)?)$/);
+    return match ? parseFloat(match[0]) : null;
+}
+
+export function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent) || window.innerWidth <= 768;
+}
+
 export default {
     lockBody,
     unlockBody,
     isLockedBody,
     createElem,
+    extractNumber,
+    isMobileDevice,
 };

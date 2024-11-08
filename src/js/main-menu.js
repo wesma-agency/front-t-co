@@ -1,5 +1,5 @@
 import { getScrollOffset } from "./header";
-import { lockBody, unlockBody } from "./utils";
+import { isMobileDevice, lockBody, unlockBody } from "./utils";
 import { updateActiveItem as updateActiveItem } from "./catalog-menu";
 
 const $mainMenu = document.querySelector(".main-menu");
@@ -13,12 +13,12 @@ if ($mainMenu) {
     const $catalogBtn = $mainMenu.querySelector(".main-menu__catalog-btn");
     const $catalogMenu = $mainMenu.querySelector(".main-menu__catalog");
     $catalogBtn.addEventListener("click", () => {
-        if ($catalogMenu.classList.contains('main-menu__catalog--active')) {
+        if ($catalogMenu.classList.contains("main-menu__catalog--active")) {
             $catalogMenu.classList.remove("main-menu__catalog--active");
             $catalogBtn.classList.remove("main-menu__catalog-btn--active");
 
-            const $activeItems = $catalogMenu.querySelectorAll('.submenu__item--active')
-            $activeItems.forEach($item => $item.classList.remove('submenu__item--active'));
+            const $activeItems = $catalogMenu.querySelectorAll(".submenu__item--active");
+            $activeItems.forEach(($item) => $item.classList.remove("submenu__item--active"));
         } else {
             $catalogMenu.classList.add("main-menu__catalog--active");
             $catalogBtn.classList.add("main-menu__catalog-btn--active");
@@ -29,7 +29,7 @@ if ($mainMenu) {
     $catalogLinks.forEach(($link) => {
         $link.addEventListener("click", (e) => {
             const itemHasSubmenu = $link.closest(".submenu__item").querySelector(".submenu__sub");
-            if (itemHasSubmenu) {
+            if (itemHasSubmenu && isMobileDevice()) {
                 updateActiveItem($link);
                 e.preventDefault();
             }

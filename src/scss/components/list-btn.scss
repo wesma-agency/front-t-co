@@ -1,0 +1,38 @@
+.list-btn {
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-gray-400;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+
+    &:before {
+        @include pseudo-icon("/icons/arrow-right-black.svg", 24px, 24px);
+        background-size: 13px 10px;
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+    &:after {
+        @include pseudo-icon("/icons/right-thin-gray-400.svg", 24px, 24px);
+        margin-left: auto;
+        background-size: 13px 10px;
+        transform: rotate(90deg);
+    }
+
+    &__addition {
+        margin-left: 4px;
+
+        &:last-child {
+            margin-right: 10px;
+        }
+    }
+
+    &.dropdown__btn--active {
+        &:after {
+            transform: rotate(-90deg);
+        }
+    }
+}

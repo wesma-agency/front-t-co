@@ -17,7 +17,7 @@ if ($bannerSlider) {
         loop: true,
         autoplay: {
             delay: 4000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
         },
         navigation: {
             prevEl: $prev,
@@ -43,7 +43,7 @@ $productsSliders.forEach(($productsSlider) => {
         loop: true,
         autoplay: {
             delay: 3000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
         },
         navigation: {
             prevEl: Array.from($prevBtns),
@@ -106,6 +106,41 @@ $categoriesSliders.forEach(($categoriesSlider) => {
     });
 });
 
+const $categoriesSlidersSm = document.querySelectorAll(".categories-slider-sm");
+$categoriesSlidersSm.forEach(($categoriesSlider) => {
+    const $sliderMain = $categoriesSlider.querySelector(".categories-slider-sm__main");
+    const $prev = $categoriesSlider.querySelector(".categories-slider-sm__prev");
+    const $next = $categoriesSlider.querySelector(".categories-slider-sm__next");
+
+    new Swiper($sliderMain, {
+        slidesPerView: 1.45,
+        spaceBetween: 10,
+        speed: 500,
+        navigation: {
+            prevEl: $prev,
+            nextEl: $next,
+        },
+        breakpoints: {
+            1281: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            1180: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            860: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            641: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+        },
+    });
+});
+
 const $brandsSliders = document.querySelectorAll(".brands-slider");
 $brandsSliders.forEach(($brandsSlider) => {
     const $sliderMain = $brandsSlider.querySelector(".brands-slider__main");
@@ -119,7 +154,7 @@ $brandsSliders.forEach(($brandsSlider) => {
         loop: true,
         autoplay: {
             delay: 3000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
         },
         allowTouchMove: false,
         navigation: {
@@ -162,6 +197,8 @@ $categoriesItemsSlider.forEach(($categoriesItemsSlider) => {
     const $prev = $categoriesItemsSlider.querySelector(".categories-items-slider__prev");
     const $next = $categoriesItemsSlider.querySelector(".categories-items-slider__next");
 
+    const desktopSlides = +$sliderMain.dataset.slidesDesktop || 3;
+
     new Swiper($sliderMain, {
         slidesPerView: 2.2,
         spaceBetween: 10,
@@ -172,6 +209,10 @@ $categoriesItemsSlider.forEach(($categoriesItemsSlider) => {
             nextEl: $next,
         },
         breakpoints: {
+            1180: {
+                slidesPerView: desktopSlides,
+                spaceBetween: 20,
+            },
             991: {
                 slidesPerView: 3,
                 spaceBetween: 20,

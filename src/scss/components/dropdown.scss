@@ -12,6 +12,10 @@
         left: 0;
         z-index: 5;
         display: none;
+
+        &--full {
+            width: 100%;
+        }
     }
 
     &--active &__main {

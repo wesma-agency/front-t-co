@@ -43,6 +43,16 @@
                 margin-left: 6px;
             }
         }
+
+        &--mx-0 {
+            &:first-child:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:last-child:not(:first-child) {
+                margin-left: 0;
+            }
+        }
     }
 
     &__text {

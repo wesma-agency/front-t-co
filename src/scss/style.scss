@@ -13,6 +13,7 @@
 @import "./components/btn-next";
 @import "./components/input";
 @import "./components/checkbox";
+@import "./components/checkboxes";
 @import "./components/form";
 @import "./components/text-content";
 @import "./components/swiper-pagination";
@@ -38,8 +39,11 @@
 @import "./components/brands-cards";
 @import "./components/brand-card";
 @import "./components/counter";
-@import "./components/nav-btns";
 @import "./components/nav-btn";
+@import "./components/nav-btns";
+@import "./components/tag";
+@import "./components/tags";
+@import "./components/nouislider";
 @import "./components/header";
 @import "./components/main";
 @import "./components/banner-1";
@@ -53,8 +57,10 @@
 @import "./components/categories-items";
 @import "./components/product-card";
 @import "./components/products-slider";
+@import "./components/category";
 @import "./components/category-card";
 @import "./components/categories-slider";
+@import "./components/categories-slider-sm";
 @import "./components/categories";
 @import "./components/brands-slider";
 @import "./components/info-about";
@@ -64,4 +70,13 @@
 @import "./components/news";
 @import "./components/news-item";
 @import "./components/callback-email";
+@import "./components/filter-num";
+@import "./components/filter-item";
+@import "./components/list-btn";
+@import "./components/filter-menu";
+@import "./components/catalog-header";
+@import "./components/catalog-footer";
+@import "./components/catalog";
+@import "./components/catalog-filters";
+@import "./components/info";
 @import "./components/footer";

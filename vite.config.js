@@ -7,11 +7,9 @@ export default {
     plugins: [
         injectHTML(),
         copy({
-            targets: [
-                { src: "pgs-panel/**/*", dest: "dist/pgs-panel" }
-            ],
-            hook: "writeBundle"
-        })
+            targets: [{ src: "pgs-panel/**/*", dest: "dist/pgs-panel" }],
+            hook: "writeBundle",
+        }),
     ],
     server: {
         // open: true,
@@ -21,6 +19,7 @@ export default {
         rollupOptions: {
             input: {
                 index: "index.html",
+                category: "category.html",
             },
         },
     },

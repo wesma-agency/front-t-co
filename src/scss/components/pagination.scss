@@ -38,10 +38,7 @@
             width: 24px;
 
             &:before {
-                @include pseudo-icon("../img/icons/right-black.svg", 24px, 24px);
-            }
-
-            &:before {
+                @include pseudo-icon("/icons/right-thin-black.svg", 24px, 24px);
                 flex: 0 0 auto;
                 background-size: 8px 12px;
             }
@@ -63,25 +60,15 @@
 
         &--disabled {
             pointer-events: none;
-
-            &:before {
-                background-image: url("../img/icons/right-blue-100.svg");
-            }
-
-            &:after {
-                visibility: visible;
-            }
         }
     }
 
-    @media (max-width: 640px) {
-        flex-direction: column;
-        align-items: center;
-
-        &__label {
-            margin-right: 0;
-            margin-bottom: 12px;
-            font-size: 14px;
+    @media (max-width: 767px) {
+        &__active,
+        &__link {
+            &:not(:first-child) {
+                margin-left: 0;
+            }
         }
     }
 }
