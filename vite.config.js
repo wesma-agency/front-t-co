@@ -3,7 +3,7 @@ import injectHTML from "vite-plugin-html-inject";
 import copy from "rollup-plugin-copy";
 
 export default {
-    base: "./",
+    base: "/front-t-co/",
     plugins: [
         injectHTML(),
         copy({
