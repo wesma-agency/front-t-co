@@ -1,0 +1,23 @@
+.menu__list {
+    margin-top: -5px;
+    margin-left: -30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu__item {
+    position: relative;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+@media (max-width: 1280px) {
+    .menu__list {
+        margin-left: -15px;
+    }
+
+    .menu__item {
+        margin-left: 15px;
+    }
+}

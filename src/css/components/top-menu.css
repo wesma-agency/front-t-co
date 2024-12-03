@@ -1,0 +1,11 @@
+.top-menu__list {
+    margin-left: -30px;
+    margin-top: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-menu__item {
+    margin-left: 30px;
+    margin-top: 15px;
+}

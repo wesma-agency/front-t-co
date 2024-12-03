@@ -1,0 +1,10 @@
+.categories-items-slider__slide {
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .categories-items-slider__main {
+        margin: 0 calc(var(--container-mobile-offset) * -1);
+        padding: 0 var(--container-mobile-offset);
+    }
+}

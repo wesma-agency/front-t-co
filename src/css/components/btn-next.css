@@ -1,0 +1,42 @@
+.btn-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-next:before {
+    content: '';
+    display: inline-block;
+    background: url('/icons/right-black.svg') center / contain no-repeat;
+    width: 9px;
+    height: 12px;
+}
+
+.btn-next--reverse:before {
+    margin-right: 3px;
+    transform: rotate(180deg);
+}
+
+.btn-next--middle {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.btn-next--middle.btn-next--reverse {
+    left: -20px;
+}
+
+@media (max-width: 767px) {
+    .btn-next {
+        width: 36px;
+        height: 36px;
+    }
+}

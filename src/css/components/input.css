@@ -1,0 +1,136 @@
+.input__main {
+    position: relative;
+    width: 100%;
+}
+
+.input__field {
+    padding: 12px 15px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray-400);
+    background-color: #fff;
+    color: var(--color-gray-400);
+    line-height: 1.25;
+    outline: none;
+}
+
+.input__field::placeholder {
+    color: var(--color-gray-400);
+}
+
+.input__field:focus {
+    color: var(--color-black);
+}
+
+.input__field::-webkit-outer-spin-button,
+.input__field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input__field[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input__field--gray-100 {
+    background-color: var(--color-gray-100);
+    border-color: var(--color-gray-200);
+}
+
+.input__field--sm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.input__field--area {
+    resize: none;
+    overflow: hidden;
+}
+
+.input__field--area-lg {
+    height: 92px;
+}
+
+.input__field--btn-right {
+    padding-right: 62px;
+}
+
+.input__field--text-sm {
+    font-size: 14px;
+    line-height: 1.286;
+}
+
+.input__field--text-gray-400:focus {
+    color: var(--color-gray-400);
+}
+
+.input__field--border-gray-300 {
+    border-color: var(--color-gray-300);
+}
+
+.input__field--border-none {
+    border-color: transparent;
+}
+
+.input__field--py-xs {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+}
+
+.input__field--py-sm {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.input__field--py-lg {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.input--error .input__field {
+    border-color: var(--color-red);
+    color: var(--color-red);
+}
+
+.input__name,
+.input__error {
+    position: absolute;
+    left: 12px;
+    padding: 0 3px;
+    max-width: calc(100% - 24px);
+    background: #fff;
+    display: none;
+    pointer-events: none;
+}
+
+.input__name {
+    bottom: calc(100% - 9px);
+}
+
+.input__error {
+    top: calc(100% - 8px);
+}
+
+.input--error .input__error {
+    display: block;
+}
+
+.input__field:focus~.input__name {
+    display: block;
+}
+
+.input__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__btn--left {
+    right: unset;
+    left: 8px;
+}

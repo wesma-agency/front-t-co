@@ -1,0 +1,17 @@
+.number-item {
+    padding: 30px;
+    min-height: 130px;
+    background-color: var(--color-gray-200);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.number-item__title {
+    font-size: 36px;
+}
+
+@media (max-width: 767px) {
+    .number-item__title {
+        font-size: 34px;
+    }
+}

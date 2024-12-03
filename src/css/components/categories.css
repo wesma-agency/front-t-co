@@ -1,0 +1,9 @@
+.categories__title {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .categories__title {
+        margin-bottom: 20px;
+    }
+}

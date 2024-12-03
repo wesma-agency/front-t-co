@@ -1,0 +1,115 @@
+.main-menu {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 38px;
+    flex-direction: column;
+    width: 100%;
+    min-height: 650px;
+    display: none;
+    background: #fff;
+    box-shadow: 0px 20px 40px rgba(0, 45, 58, 0.15);
+    transition: visibility 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.main-menu--active {
+    display: flex;
+}
+
+.main-menu__container {
+    width: 100%;
+}
+
+.main-menu__content {
+    height: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu__catalog-btn {
+    margin-bottom: 25px;
+    display: none;
+}
+
+.main-menu__catalog-btn:after {
+    content: '';
+    display: inline-block;
+    background: url('/icons/right-white.svg') center / contain no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background-size: 9px 12px;
+}
+
+.main-menu__mobile {
+    flex: 1 1 auto;
+    display: none;
+}
+
+.main-menu__submenu:not(:first-child) {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-300);
+}
+
+.main-menu__submenu-item:not(:first-child) {
+    margin-top: 25px;
+}
+
+.main-menu__submenu-item--mt-sm:not(:first-child) {
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .main-menu {
+        flex-direction: column;
+        padding: 20px;
+        height: calc(100vh - 136px);
+        height: calc(100dvh - 136px);
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .main-menu__container {
+        padding-left: 0;
+        padding-right: 0;
+        flex: 1 1 auto;
+    }
+
+    .main-menu__body {
+        position: relative;
+        flex: 1 1 auto;
+    }
+
+    .main-menu__catalog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+    }
+
+    .main-menu__catalog--active {
+        display: flex;
+    }
+
+    .main-menu__catalog-btn {
+        display: flex;
+    }
+
+    .main-menu__catalog-btn--active .btn__icon {
+        display: none;
+    }
+
+    .main-menu__catalog-btn--active:after {
+        order: -1;
+        margin-left: 0px;
+        margin-right: 10px;
+        transform: rotate(180deg);
+    }
+
+    .main-menu__mobile {
+        display: block;
+    }
+}

@@ -1,0 +1,13 @@
+.brands-cards__list {
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brands-cards__item {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 118px;
+    width: calc(25% - 20px);
+}

@@ -1,0 +1,30 @@
+.banner-slider__content {
+    position: relative;
+}
+
+.banner-slider__main {
+    position: relative;
+}
+
+.banner-slider__slide {
+    height: auto;
+}
+
+.banner-slider__pagination {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+    .banner-slider__pagination {
+        bottom: 6px;
+    }
+
+    .banner-slider__prev,
+    .banner-slider__next {
+        display: none;
+    }
+}

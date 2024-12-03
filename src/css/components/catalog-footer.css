@@ -1,0 +1,27 @@
+.catalog-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalog-footer__bottom:not(:first-child) {
+    margin-top: 40px;
+}
+
+.catalog-footer__bottom-link {
+    margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .catalog-footer__bottom {
+        justify-content: center;
+    }
+
+    .catalog-footer__bottom:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .catalog-footer__bottom-link {
+        display: none;
+    }
+}

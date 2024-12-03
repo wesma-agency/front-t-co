@@ -1,0 +1,24 @@
+.dropdown {
+    position: relative;
+    display: inline-flex;
+}
+
+.dropdown__btn {
+    width: 100%;
+}
+
+.dropdown__main {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 5;
+    display: none;
+}
+
+.dropdown__main--full {
+    width: 100%;
+}
+
+.dropdown--active .dropdown__main {
+    display: block;
+}

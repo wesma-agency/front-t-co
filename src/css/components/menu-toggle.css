@@ -1,0 +1,61 @@
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.menu-toggle__lines {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-toggle__lines,
+.menu-toggle__lines:before,
+.menu-toggle__lines:after {
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    display: block;
+    transform: rotate(0);
+    width: 18px;
+    transition: transform 0.35s, width 0.35s, background 0.35s;
+}
+
+.menu-toggle__lines:before,
+.menu-toggle__lines:after {
+    content: "";
+    position: absolute;
+    right: 0;
+}
+
+.menu-toggle__lines:before {
+    transform: translateY(-6px);
+}
+
+.menu-toggle__lines:after {
+    transform: translateY(6px);
+}
+
+.menu-toggle__lines--purple,
+.menu-toggle__lines--purple:before,
+.menu-toggle__lines--purple:after {
+    background-color: var(--color-purple);
+}
+
+.menu-toggle--active .menu-toggle__lines,
+.js-main-menu-btn-active .menu-toggle__lines {
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+
+.menu-toggle--active .menu-toggle__lines:before,
+.js-main-menu-btn-active .menu-toggle__lines:before {
+    transform: rotate(-90deg);
+}
+
+.menu-toggle--active .menu-toggle__lines:after,
+.js-main-menu-btn-active .menu-toggle__lines:after {
+    transform: rotate(0deg);
+}

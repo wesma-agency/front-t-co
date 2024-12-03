@@ -1,0 +1,16 @@
+.nav-btns {
+    min-width: 0;
+}
+
+.nav-btns__list {
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 21px;
+    overflow-x: auto;
+}
+
+.nav-btns__btn {
+    flex: 0 0 auto;
+}

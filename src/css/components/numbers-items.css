@@ -1,0 +1,31 @@
+.numbers-items__list {
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numbers-items__item {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: calc(25% - 20px);
+}
+
+@media (max-width: 991px) {
+    .numbers-items__item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .numbers-items__list {
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+
+    .numbers-items__item {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: calc(50% - 10px);
+    }
+}

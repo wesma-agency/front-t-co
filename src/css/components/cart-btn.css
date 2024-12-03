@@ -1,0 +1,32 @@
+.cart-btn {
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn__main {
+    flex: 0 0 auto;
+}
+
+.cart-btn__info:not(:first-child) {
+    margin-left: 15px;
+}
+
+.cart-btn__label {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.cart-btn__label:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+@media (max-width: 991px) {
+    .cart-btn__main {
+        width: 38px;
+        height: 38px;
+    }
+
+    .cart-btn__info {
+        display: none;
+    }
+}

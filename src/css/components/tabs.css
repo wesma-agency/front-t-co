@@ -1,0 +1,7 @@
+.tabs-list__item {
+    display: none;
+}
+
+.tabs-list__item--active {
+    display: block;
+}

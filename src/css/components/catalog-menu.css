@@ -1,0 +1,25 @@
+.catalog-menu__container {
+    height: 100%;
+}
+
+.catalog-menu__content {
+    height: 100%;
+}
+
+.catalog-menu__main {
+    position: relative;
+    padding-right: 15px;
+    width: 365px;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .catalog-menu__content {
+        width: 100%;
+    }
+
+    .catalog-menu__main {
+        padding-right: 0;
+        width: 100%;
+    }
+}

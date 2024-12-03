@@ -1,0 +1,39 @@
+.brands-slider__header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brands-slider__box {
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .brands-slider__header-link {
+        font-size: 14px;
+    }
+
+    .brands-slider__prev,
+    .brands-slider__next {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .brands-slider__wrapper {
+        margin-top: -10px;
+        margin-left: -10px;
+        transform: translate3d(0, 0, 0) !important;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .brands-slider__slide {
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 85px;
+        padding: 10px 3px;
+        width: calc(25% - 10px) !important;
+    }
+}

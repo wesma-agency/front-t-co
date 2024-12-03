@@ -1,0 +1,231 @@
+.btn {
+    padding: 13px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    background: var(--color-primary);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--color-black);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: color 0.35s, background 0.35s, border 0.35s;
+}
+
+@media (min-width: 992px) {
+    .btn:hover {
+        background-color: var(--color-primary-light);
+    }
+}
+
+.btn:disabled {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.btn--second {
+    color: #fff;
+    background-color: var(--color-second);
+    border-color: var(--color-second);
+}
+
+@media (min-width: 992px) {
+    .btn--second:hover {
+        background-color: var(--color-second-dark);
+    }
+}
+
+.btn--purple {
+    color: #fff;
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+}
+
+@media (min-width: 992px) {
+    .btn--purple:hover {
+        background-color: var(--color-purple-dark);
+    }
+}
+
+.btn--gray-300 {
+    color: var(--color-purple);
+    background-color: var(--color-gray-300);
+    border-color: var(--color-gray-300);
+}
+
+@media (min-width: 992px) {
+    .btn--gray-300:hover {
+        background-color: var(--color-gray-100);
+    }
+}
+
+.btn--border-purple {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+    background: transparent;
+}
+
+@media (min-width: 992px) {
+    .btn--border-purple:hover {
+        border-color: var(--color-gray-300);
+        background-color: var(--color-gray-300);
+    }
+}
+
+.btn--border-gray-200 {
+    border-color: var(--color-gray-200);
+    background: transparent;
+}
+
+@media (min-width: 992px) {
+    .btn--border-gray-200:hover {
+        border-color: var(--color-gray-200);
+        background-color: var(--color-gray-100);
+    }
+}
+
+.btn--border-gray-400 {
+    border-color: var(--color-gray-400);
+    background: transparent;
+    color: var(--color-gray-400);
+}
+
+@media (min-width: 992px) {
+    .btn--border-gray-400:hover {
+        border-color: var(--color-gray-400);
+        background-color: var(--color-gray-100);
+    }
+}
+
+.btn--border-black {
+    border-color: var(--color-black);
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    .btn--border-black:hover {
+        border-color: var(--color-gray-400);
+        color: var(--color-gray-400);
+    }
+}
+
+.btn--iflex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--column {
+    flex-direction: column;
+}
+
+.btn--justify-start {
+    justify-content: flex-start;
+}
+
+.btn--justify-end {
+    justify-content: flex-end;
+}
+
+.btn--items-start {
+    align-items: flex-start;
+}
+
+.btn--items--end {
+    align-items: flex-end;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.btn--text-left {
+    text-align: left;
+}
+
+.btn--py-4xs {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.btn--py-3xs {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.btn--py-2xs {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.btn--py-xs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn--py-sm {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.btn--px-xs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn--px-sm {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.btn--p-xs {
+    padding: 10px;
+}
+
+.btn--medium {
+    font-weight: 500;
+}
+
+.btn__icon {
+    flex: 0 0 auto;
+}
+
+.btn__icon:first-child:not(:last-child) {
+    margin-right: 10px;
+}
+
+.btn__icon:last-child:not(:first-child) {
+    margin-left: 10px;
+}
+
+.btn__icon--mx-xs:first-child:not(:last-child) {
+    margin-right: 6px;
+}
+
+.btn__icon--mx-xs:last-child:not(:first-child) {
+    margin-left: 6px;
+}
+
+.btn__icon--mx-sm:first-child:not(:last-child) {
+    margin-right: 8px;
+}
+
+.btn__icon--mx-sm:last-child:not(:first-child) {
+    margin-left: 8px;
+}
+
+.btn__icon--mx-lg:first-child:not(:last-child) {
+    margin-right: 12px;
+}
+
+.btn__icon--mx-lg:last-child:not(:first-child) {
+    margin-left: 12px;
+}

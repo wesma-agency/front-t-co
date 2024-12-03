@@ -1,0 +1,100 @@
+.category-item {
+    position: relative;
+    padding: 8px 20px;
+    background-color: var(--color-second);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.category-item--lines:before {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    z-index: 1;
+    background-position: left;
+    content: '';
+    display: inline-block;
+    background: url('/img/categories-items/lines.svg') center / contain no-repeat;
+    width: 380px;
+    height: 90px;
+}
+
+.category-item--logo:after {
+    position: absolute;
+    right: -3px;
+    bottom: -20px;
+    content: '';
+    display: inline-block;
+    background: url('/img/categories-items/logo-bg.svg') center / contain no-repeat;
+    width: 127px;
+    height: 127px;
+}
+
+.category-item--big {
+    padding: 0 15px 0 20px;
+    min-height: 158px;
+}
+
+.category-item--logo.category-item--big:after {
+    right: 0;
+    bottom: -8px;
+    width: 160px;
+    height: 160px;
+}
+
+.category-item__main {
+    position: relative;
+    z-index: 1;
+    padding-top: 12px;
+    flex: 1 1 auto;
+    max-width: 140px;
+}
+
+.category-item--big .category-item__main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.category-item__img-box {
+    position: relative;
+    margin-left: 10px;
+    z-index: 1;
+    align-self: center;
+    flex: 0 0 auto;
+}
+
+.category-item__img {
+    max-height: 106px;
+    object-fit: contain;
+    display: block;
+}
+
+.category-item--big .category-item__img {
+    max-height: 158px;
+}
+
+@media (max-width: 767px) {
+    .category-item--mobile-big {
+        flex-direction: column;
+        min-height: 240px;
+    }
+
+    .category-item--logo.category-item--mobile-big:after {
+        right: -2px;
+        bottom: -9px;
+        width: 137px;
+        height: 137px;
+    }
+
+    .category-item--mobile-big .category-item__img-box {
+        margin-left: 0;
+        align-self: flex-end;
+    }
+
+    .category-item--mobile-big .category-item__img {
+        max-height: 137px;
+    }
+}

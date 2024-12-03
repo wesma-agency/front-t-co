@@ -1,0 +1,29 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.icon__img--rotate-90deg {
+    transform: rotate(90deg);
+}
+
+.icon__img--rotate-180deg {
+    transform: rotate(180deg);
+}
+
+.icon__img--rotate-270deg {
+    transform: rotate(270deg);
+}
+
+.icon--sm {
+    width: 20px;
+    height: 20px;
+}

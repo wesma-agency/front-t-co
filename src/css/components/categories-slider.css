@@ -1,0 +1,15 @@
+.categories-slider {
+    display: flex;
+}
+
+.categories-slider__main {
+    margin: -40px -19px -50px;
+    padding: 40px 19px 50px;
+}
+
+@media (max-width: 767px) {
+    .categories-slider__main {
+        margin: -20px calc(var(--container-mobile-offset) * -1);
+        padding: 20px var(--container-mobile-offset);
+    }
+}

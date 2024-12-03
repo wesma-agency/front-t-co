@@ -1,0 +1,136 @@
+.custom-slider__header {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-slider__title--pr-sm {
+    padding-right: 12px;
+}
+
+.custom-slider__controls {
+    flex: 0 0 auto;
+    display: none;
+}
+
+.custom-slider__controls:not(:first-child) {
+    margin-left: 20px;
+}
+
+.custom-slider__controls--show {
+    display: flex;
+}
+
+.custom-slider__slide {
+    margin-right: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: calc(33.33% - 20px);
+}
+
+.custom-slider__slide--items-start {
+    align-items: flex-start;
+}
+
+.custom-slider__main[data-space-between] .custom-slider__slide {
+    margin-right: 0;
+}
+
+.custom-slider__item {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-slider__img.gallery__btn {
+    cursor: pointer;
+}
+
+.custom-slider__img--review {
+    max-height: 247px;
+}
+
+.custom-slider__pagination {
+    margin-top: 16px;
+}
+
+.custom-slider__footer {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-slider__more {
+    width: 320px;
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .custom-slider__header {
+        margin-bottom: 32px;
+    }
+
+    .custom-slider__title--lg-sm {
+        max-width: 540px;
+    }
+
+    .custom-slider__footer {
+        margin-top: 32px;
+    }
+
+    .custom-slider__slide {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-slider__header {
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-slider__header--mobile-mb-sm {
+        margin-bottom: 16px;
+    }
+
+    .custom-slider__header--mobile-row {
+        flex-direction: row;
+    }
+
+    .custom-slider__controls {
+        margin-left: auto;
+    }
+
+    .custom-slider__controls:not(:first-child) {
+        margin-top: 8px;
+        margin-left: auto;
+    }
+
+    .custom-slider__controls--mobile-right:not(:first-child) {
+        margin-top: 0;
+        margin-left: 12px;
+    }
+
+    .custom-slider__title {
+        max-width: 375px;
+    }
+
+    .custom-slider__main {
+        margin-left: calc(-1 * var(--container-mobile-offset));
+        margin-right: calc(-1 * var(--container-mobile-offset));
+        padding-left: var(--container-mobile-offset);
+        padding-right: var(--container-mobile-offset);
+    }
+
+    .custom-slider__slide {
+        width: calc(100% - 20px);
+    }
+
+    .custom-slider__footer {
+        margin-top: 24px;
+    }
+}
